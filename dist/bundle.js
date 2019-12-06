@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('jojo')\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("let a = 'je pense donc je suis mais au fond qui suis je';\nconsole.log(a)\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
