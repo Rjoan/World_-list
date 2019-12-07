@@ -10,9 +10,9 @@ const initMap = () => {
 
         let marker = new google.maps.Marker({
             position: paris,
-             map: map,
-             icon: 'images/marker.png'
-            });
+            map: map,
+            icon: 'images/marker.png'
+        });
   }
 
   export {initMap};
