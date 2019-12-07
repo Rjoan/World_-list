@@ -4,15 +4,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo_50.png" width="50" height="50" alt="">&nbsp;&nbsp;World Bucket List
+        </a>
+    </nav>
+        
+    <div class="container-fluid">
+        <div class="row">
+            <div id="row-dreams" class="col-sm-6 col-md-5 col-lg-4 col-xl-3"></div>
+            <div id="row-map" class="col-sm-6 col-md-7 col-lg-8 col-xl-9">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
 
-    <div id="map"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNwUWbkkA2oNGd_fSpdYOb0qS66FBZits&callback=init"
-        type="text/javascript"></script>
-        <script src="bundle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNwUWbkkA2oNGd_fSpdYOb0qS66FBZits&callback=init" type="text/javascript"></script>
+    <script src="bundle.js"></script>
+
   </body>
 </html>

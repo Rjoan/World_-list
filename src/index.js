@@ -4,4 +4,4 @@ const init = () => {
     initMap();
 }
 
-  window.init = init; 
+  window.init = init;   
