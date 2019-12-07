@@ -1,14 +1,18 @@
+
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>World Project</title>
-</head>
-<body>
-    <h1>Test</h1>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
 
-    <script src="bundle.js"></script>
-</body>
+    <div id="map"></div>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNwUWbkkA2oNGd_fSpdYOb0qS66FBZits&callback=init"
+        type="text/javascript"></script>
+        <script src="bundle.js"></script>
+  </body>
 </html>
