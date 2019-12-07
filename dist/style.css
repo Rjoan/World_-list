@@ -1,0 +1,43 @@
+ html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: cursive, sans-serif;
+ }
+
+.navbar-brand {
+   color: #FFF;
+   font-weight: bold;
+   font-size: 30px;  
+}
+
+.container-fluid {
+   height: calc(100% - 76px);
+}
+
+.row {
+   height: 100%;
+   overflow-y: auto
+}
+
+#map {
+   height: 400px;  
+   width: 100%; 
+   position: absolute; 
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+#row-map {
+   padding: 0;
+   height: 100%;
+}
+
+#row-dreams {
+   padding: 15px;
+   overflow-y: auto;
+   height: 100%;
+   background-color: #EEE;
+}
