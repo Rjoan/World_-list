@@ -1,4 +1,6 @@
 let map;
+let panorama;
+
 const resetMapButton = document.querySelector("#reset-map");
 
 const initMap = () => {
@@ -7,7 +9,19 @@ const initMap = () => {
         document.getElementById('map'), {
         zoom: 3,
         center: paris,
+        streetViewControl: false
     });
+
+    panorama = new google.maps.StreetViewPanorama(
+    document.getElementById('panorama'), {
+        position: {lat: 48.8580660, lng: 2.2945776},
+        pov: {
+        heading: 34,
+        pitch: 10
+        }
+    });
+
+    map.setStreetView(panorama);
 
     addMarkerListener();
   }
