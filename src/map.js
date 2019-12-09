@@ -1,19 +1,39 @@
+let map;
+const resetMapButton = document.querySelector("#reset-map");
+
 const initMap = () => {
     let paris = {lat: 48.8580660, lng: 2.2945776};
-    
-    let map = new google.maps.Map(
+    map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 18,
-            center: paris,
-            mapTypeId: 'satellite'
-        });
+        zoom: 3,
+        center: paris,
+    });
 
-        let marker = new google.maps.Marker({
-            position: paris,
-             map: map,
-             icon: 'images/marker.png'
-            });
+    addMarkerListener();
   }
 
-  export {initMap};
-   
+  const addMarkerListener = () => {
+    resetMapButton.addEventListener('click', resetMap);
+  }
+
+  const addMarkerOnMap = dream => {
+    let marker = new google.maps.Marker({
+        position: dream.coord,
+        map: map,
+        icon: dream.done ? "images/marker_done.png" : "images/marker.png"
+    });
+
+    marker.addListener('click', function() {
+        map.setZoom(20);
+        map.setCenter(marker.getPosition())
+        map.setMapTypeId("satellite")
+    })
+  }
+
+  const resetMap = () => {
+    map.setZoom(3);
+    map.setCenter({lat: 48.8580660, lng: 2.2945776});
+    map.setMapTypeId("roadmap")
+  }
+ 
+export {initMap, addMarkerOnMap}; 
