@@ -1,6 +1,6 @@
 let map;
 let panorama;
-
+const panoramaElement = document.querySelector('#panorama');
 const resetMapButton = document.querySelector("#reset-map");
 
 const initMap = () => {
@@ -24,6 +24,8 @@ const initMap = () => {
     map.setStreetView(panorama);
 
     addMarkerListener();
+    panoramaElement.style.display = "none";
+
   }
 
   const addMarkerListener = () => {
@@ -45,9 +47,14 @@ const initMap = () => {
   }
 
   const resetMap = () => {
-    map.setZoom(3);
-    map.setCenter({lat: 48.8580660, lng: 2.2945776});
-    map.setMapTypeId("roadmap")
+        map.setZoom(3);
+        map.setCenter({lat: 48.8580660, lng: 2.2945776});
+        map.setMapTypeId("roadmap")
+  } 
+
+  const visitDreamOnMap = position => {
+        panorama.setPosition(position)
+        panoramaElement.style.display = "block";
   }
  
-export {initMap, addMarkerOnMap}; 
+export {initMap, addMarkerOnMap, visitDreamOnMap}; 

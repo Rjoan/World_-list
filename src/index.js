@@ -1,9 +1,9 @@
 import {initMap} from "./map";
-import {buildAllDreams} from "./dreams";
+import {getData} from "./data";
 
 const init = () => {
     initMap();
-    buildAllDreams();
+    getData();
 }
 
 window.init = init;   
